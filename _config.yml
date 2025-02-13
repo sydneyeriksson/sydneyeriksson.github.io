@@ -1,3 +1,4 @@
 # title: Sydney Eriksson
 # logo: docs/assets/WebsiteFrontPage.png
 # theme: jekyll-theme-tactile
+layout: custom_layout
