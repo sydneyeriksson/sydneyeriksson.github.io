@@ -24,13 +24,38 @@
       align-items: center;
       z-index: 1;
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
   <!-- Main content of the page -->
   <main>
     <img src="../docs/assets/website_front_page_color.png" alt="Website Front Page" width="100%">
+    
     {{ content }} <!-- This will display the content from the page that uses this layout -->
   </main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>This is the about section content.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>This is the projects section content.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>This is the contact section content.</p>
+  </section>
 </body>
 </html>
