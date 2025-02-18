@@ -17,7 +17,6 @@
       html {
         scroll-behavior: smooth;
       }
-
       .navigation {
         text-decoration: none; /* Remove the underline */
         color: inherit; /* Make the link color inherit from its parent (or set a custom color) */
@@ -114,24 +113,39 @@
         margin: 7px;
       }
       @media (max-width: 768px) {
+        .profile-pic {
+          width: 25%;
+          border-radius: 50%;
+        }
+        .front-page-container {
+          position: relative;
+          margin-bottom: 0px;
+        }
         .navigation-container {
-          position: absolute;
-          top: 35%;
-          right: 5%;
+          position: relative;
           display: flex;
           flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          right: auto;
+        }
+        .navigation {
+          text-decoration: none; /* Remove the underline */
+          color: inherit; /* Make the link color inherit from its parent (or set a custom color) */
+          padding: 0px;
         }
         .navigation-button {
           display: inline-block; /* or inline */
-          padding: 2px 1px;
+          padding: 5px;
           align-items: center;
           justify-content: center;
           text-align: center;
           margin: 2px;
           border-radius: 10px;
           background-color: rgb(202, 224, 232);
-          font-size: xx-small;
+          font-size: x-small;
           color: black;
+          width: 85%;
         }
         .text-and-image {
           display: block; /* Stack items vertically */
