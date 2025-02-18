@@ -85,9 +85,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 20px;
       }
-      .intro-container{
-          width: 45%;
+      .intro-container {
+        width: 45%;
       }
       .word_translate_img {
         display: flex;
@@ -106,7 +107,10 @@
       .project-container {
         padding: 20px;
       }
-      details{
+      .text-container {
+        width: 60%;
+      }
+      details {
         margin: 7px;
       }
     </style>
@@ -178,165 +182,357 @@
       <section id="projects" class="section-container">
         <h1>Projects</h1>
         <div class="project-container">
-        <div class="text-and-image">
-          <div class="intro-container">
-        <h2>React Flask Language Learning Web App</h3>
-          <p>
-            <a href="https://language-learning-frontend-puce.vercel.app/"
-              >Click here to see the language learning web app</a
-            >
-          </p>
-        <p>
-          I created an app that allows users to select a Gutenberg Library book
-          from a bookshelf, and then read it in any language. Users can
-          customize light mode vs dark mode, difficulty of the text, font,
-          language, and the page number which they are reading. Additionally,
-          users can click on words they are unfamiliar with which translates the
-          word to english and adds it to a list of "mistakes" which they can
-          review with a built in flash cards deck.
-        </p>
-      </div>
-      <img
-      src="../docs/assets/language_app_overview.png"
-      alt="language_app_overview"
-      width="45%"
-    />
-      </div>
-        <h3>React Frontend</h3>
-        <p>
-          <a href="https://language-learning-frontend-puce.vercel.app/"
-            >Frontend GitHub Repository</a
-          >
-        </p>
-        <details>
-          <summary>Bookshelf</summary>
           <div class="text-and-image">
-            <div>
-            <p>Features:</p>
-            <li>Scrollable</li>
-            <li>Clickable books</li>
-          </div>
+            <div class="intro-container">
+              <h2>React Flask Language Learning Web App</h2>
+              <p>
+                <a href="https://language-learning-frontend-puce.vercel.app/"
+                  >Click here to see the language learning web app</a
+                >
+              </p>
+              <p>
+                I created an app that allows users to select a Gutenberg Library
+                book from a bookshelf, and then read it in any language. Users
+                can customize the reading experience with options for light/dark
+                mode, text difficulty, font, language, and the page number.
+                Additionally, users can click on words they don't understand,
+                which will translate the word to English and add it to a
+                "mistakes" list. This list can then be reviewed using a built-in
+                flashcard deck for better learning.
+              </p>
+            </div>
             <img
-      src="../docs/assets/bookshelf.png"
-      alt="profile_pic"
-      width="20%"
-    />
+              src="../docs/assets/language_app_overview.png"
+              alt="language_app_overview"
+              width="45%"
+            />
           </div>
-        </details>
-        <details>
-          <summary>Words that translate on click</summary>
-          <div class="text-and-image">
+          <div class="project-container">
+            <h3>React Frontend</h3>
             <p>
-              This is the content inside the collapsible section. You can add any
-              type of content here, such as text, images, or even forms.
+              <a href="https://language-learning-frontend-puce.vercel.app/"
+                >Frontend GitHub Repository</a
+              >
             </p>
-            <div class="word_translate_img">
-              <img
-                src="../docs/assets/untranslated_text.png"
-                alt="untranslated_text"
-              />
-              <img
-                src="../docs/assets/translated_text.png"
-                alt="translated_text"
-              />
-            </div>
-          </div>
-        </details>
-        <details>
-          <summary>Flash Cards</summary>
-          <div class="text-and-image">
-            <p>
-              This is the content inside the collapsible section. You can add any
-              type of content here, such as text, images, or even forms.
-            </p>
-              <img
-                src="../docs/assets/flash_card.png"
-                alt="flash-card"
-                width="30%"
-              />
-          </div>
-        </details>
-        <details>
-          <summary>Custom fonts and colors</summary>
-            <div class="text-and-image">
-              <p>
-                This is the content inside the collapsible section. You can add any
-                type of content here, such as text, images, or even forms.
-              </p>
-              <div class="custom_text_img">
-                <img
-                  src="../docs/assets/uncustomized-text.png"
-                  alt="uncustomized-text"
-                />
-                <img
-                  src="../docs/assets/custom-text.png"
-                  alt="cusomized-text"
-                />
+            <details>
+              <summary>Bookshelf</summary>
+              <div class="text-and-image">
+                <div class="text-container">
+                  <p>
+                    The Bookshelf component is a visually interactive feature
+                    that simulates a bookshelf filled with clickable books. Each
+                    book in the stack is styled dynamically using CSS variables,
+                    and users can click on these books to read them in the page
+                    section. When the user clicks on a book, the backend is
+                    called with the book title as a parameter and returns the
+                    page for the user to read. This allows for a seamless user
+                    experience where users can visually navigate through a
+                    collection of books, all while maintaining a playful,
+                    whimsical design.
+                  </p>
+                  <p>
+                    The bookshelf is divided into multiple shelves, each
+                    containing a set of books arranged creatively with varying
+                    heights and rotations, making the interface both engaging
+                    and realistic.
+                  </p>
+                  <p>
+                    This component also includes two cat characters as gifs that
+                    move periodically, enhancing the interactive experience.
+                  </p>
+                </div>
+                <div class="word_translate_img">
+                  <img src="../docs/assets/bookshelf.png" alt="bookshelf" />
+                </div>
               </div>
-            </div>
-        </details>
-        <details>
-          <summary>Easy to turn pages</summary>
-            <div class="text-and-image">
-              <div>
-              <p>
-                In order to make it easy for users to find the page they are looking for, 
-                I used a number input for users to type in a specific page.
-              </p>
-              <p>
-                To make is simple to turn a page, I created an image of the bottom of a 
-                page turning that is visible when a user mouses over it. I also added a 
-                small blank footer at the bottom of the page, so that this image does not 
-                interfere with the user clicking on any words. When the user clicks on the 
-                image in the bottom left corner, the page number decrements by one, and when 
-                the user clicks on the image in the bottom right corner, the page number 
-                increments by one. 
-              </p>
-            </div>
+            </details>
+            <details>
+              <summary>Words that translate on click</summary>
+              <div class="text-and-image">
+                <div class="text-container">
+                  <p>
+                    Word translation on click allows users to toggle between the
+                    original word and its translated form, while also adding
+                    words to a review list, offering a seamless learning
+                    experience.
+                  </p>
+                  <p>
+                    Each word on the page is a checkbox component that is styled
+                    using CSS to look like a word. Upon clicking the checkbox,
+                    the component makes an API request to fetch the translation
+                    of a word, utilizing axios to communicate with the backend.
+                    This interaction is designed to help users quickly view the
+                    translation and mark words for later review. The component’s
+                    state is managed locally with React’s useState hook,
+                    allowing it to track whether the word has been checked.
+                  </p>
+                  <p>
+                    Each page is composed a list of paragraphs, which are
+                    sublists of words. These paragraphs are mapped over the page
+                    in a column, and words are mapped over each paragraph in
+                    rows to mimic the structure of a real book. Each word is
+                    given a unique id composed of the paragraph and word number
+                    to track which words should be translated or not.
+                  </p>
+                  <p>
+                    The mistake list serves as a personalized collection of
+                    words that a user has difficulty remembering or
+                    understanding. When users click on a word, the word and its
+                    translation are added to the mistake list for further
+                    practice.
+                  </p>
+                  <p>
+                    The background color of each word changes when it is
+                    selected to provide a visual indicator of which words are
+                    translated and which are in the original language.
+                  </p>
+                </div>
+                <div class="word_translate_img">
+                  <img
+                    src="../docs/assets/untranslated_text.png"
+                    alt="untranslated_text"
+                  />
+                  <img
+                    src="../docs/assets/translated_text.png"
+                    alt="translated_text"
+                  />
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Flash Cards</summary>
+              <div class="text-and-image">
+                <div class="intro-container">
+                  <p>
+                    The Flash Cards page is a dynamic learning tool that helps
+                    users review words from a custom list, displaying them in
+                    either the original language or their translation. Users can
+                    navigate through flashcards, flipping between the word and
+                    its translation, and marking words as "memorized" which
+                    removes them from the list.
+                  </p>
+                  <p>
+                    The page utilizes React's useState and useEffect hooks to
+                    manage the state of the flashcards, including the index,
+                    translation visibility, and to make the cat image happy when
+                    the user memorizes a word.
+                  </p>
+                  <p>
+                    The component integrates navigation using React Router's
+                    useNavigate and useLocation hooks to persist the list of
+                    words through different views.
+                  </p>
+                  <p>
+                    The interface also includes intuitive controls to move
+                    through the deck with next/previous buttons and offers a
+                    visual reward by switching the cat image when a word is
+                    marked as memorized. The app is designed to be interactive
+                    and engaging, making language learning both fun and
+                    effective.
+                  </p>
+                </div>
+                <div class="custom_text_img">
+                  <img src="../docs/assets/flash_card.png" alt="flash-card" />
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Book Settings</summary>
+              <div class="text-and-image">
+                <div class="text-container">
+                  <p>
+                    The book settings include two select dropdowns and a number
+                    input field in the header, enabling users to customize their
+                    experience by selecting a difficulty level and a language,
+                    as well as entering a page number.
+                  </p>
+                  <p>
+                    When a user adjusts any of these settings, an API call is
+                    made to the backend with the selected parameters—difficulty,
+                    language, and book title. The backend processes the request
+                    and returns the appropriate page content in the selected
+                    language. If the user selects "Easy" difficulty, the page
+                    content is further simplified by OpenAI’s ChatGPT. The page
+                    is returned as a list of paragraphs, where each paragraph is
+                    a sublist of words.
+                  </p>
+                  <p>
+                    To persist user preferences across sessions and page
+                    navigations, I utilized sessionStorage within a useEffect
+                    hook. This ensures that whenever a user changes a setting,
+                    the updated configuration is saved to session storage. Upon
+                    returning to the page, the application checks for any saved
+                    settings and, if present, restores them, providing a
+                    seamless user experience without requiring the user to
+                    reconfigure their preferences.
+                  </p>
+                </div>
+                <div class="word_translate_img">
+                  <img src="../docs/assets/settings.png" alt="settings" />
+                  <img
+                    src="../docs/assets/settings_in_action.png"
+                    alt="settings_in_action"
+                  />
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Custom fonts and colors</summary>
+              <div class="text-and-image">
+                <div class="intro-container">
+                  <p>
+                    The header includes three select dropdowns, allowing users
+                    to choose between light mode and dark mode, a font style,
+                    and a font size.
+                  </p>
+                  <p>
+                    I defined two color palettes in the CSS, with variables
+                    representing the corresponding colors for each theme. I then
+                    replaced the hardcoded hex codes throughout the CSS with
+                    these theme variables. A useState hook is used to manage the
+                    theme selection, and it dynamically updates the theme when
+                    the user selects a new option.
+                  </p>
+                  <p>
+                    For font and font size customization, I used useState hooks
+                    to track the selected font and font size. These values are
+                    then applied to the content component by passing them into
+                    its CSS, allowing the user to personalize the text display.
+                  </p>
+                  <p>
+                    To persist user preferences across sessions and page
+                    navigations, I utilized sessionStorage within a useEffect
+                    hook. This ensures that whenever a user changes a setting,
+                    the updated configuration is saved to session storage. Upon
+                    returning to the page, the application checks for any saved
+                    settings and, if present, restores them, providing a
+                    seamless user experience without requiring the user to
+                    reconfigure their preferences.
+                  </p>
+                </div>
+                <div class="custom_text_img">
+                  <img
+                    src="../docs/assets/uncustomized-text.png"
+                    alt="uncustomized-text"
+                  />
+                  <img
+                    src="../docs/assets/custom-text.png"
+                    alt="cusomized-text"
+                  />
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>Seamless Page Navigation</summary>
+              <div class="text-and-image">
+                <div class="text-container">
+                  <p>
+                    To make it easier for users to navigate to a specific page,
+                    I implemented a number input field where users can type in
+                    page numbers directly.
+                  </p>
+                  <p>
+                    To provide a more interactive and immersive experience, I
+                    designed a "page turn" image that mimics the action of
+                    turning a page in a real book. This image appears when the
+                    user hovers over it. When the user clicks on the image in
+                    the bottom left corner, the page number decrements by one.
+                    Similarly, clicking on the image in the bottom right corner
+                    increments the page number by one.
+                  </p>
+                  <p>
+                    I also added a small blank footer at the bottom of the page.
+                    This ensures that the "page turn" image doesn’t interfere
+                    with users trying to click on words, maintaining a smooth
+                    and user-friendly interaction.
+                  </p>
+                </div>
+                <div class="word_translate_img">
+                  <img src="../docs/assets/go_to_page.png" alt="go_to_page" />
+                  <img
+                    src="../docs/assets/page_not_turning.png"
+                    alt="page_not_turning"
+                  />
+                  <img
+                    src="../docs/assets/page_turning.png"
+                    alt="page_turning"
+                  />
+                </div>
+              </div>
+              <!-- <div class="text-and-image">
+              <div class="text-container">
+                <p>
+                  To mimic turning a page in a real book, I created a "page
+                  turn" image which is visible when a user mouses over it.
+                </p>
+                <p>
+                  When the user clicks on the image in the bottom left corner,
+                  the page number decrements by one.
+                </p>
+                <p>
+                  When the user clicks on the image in the bottom right corner,
+                  the page number increments by one.
+                </p>
+                <p>
+                  I also added a small blank footer at the bottom of the page,
+                  so that this image does not interfere with the user clicking
+                  on any words.
+                </p>
+              </div>
               <div class="word_translate_img">
-                <img
-                  src="../docs/assets/go_to_page.png"
-                  alt="go_to_page"
-                />
                 <img
                   src="../docs/assets/page_not_turning.png"
                   alt="page_not_turning"
                 />
-                <img
-                  src="../docs/assets/page_turning.png"
-                  alt="page_turning"
-                />
+                <img src="../docs/assets/page_turning.png" alt="page_turning" />
               </div>
-            </div>
-        </details>
-        <h3>Flask Backend</h3>
-        <p>
-          <a href="https://language-learning-frontend-puce.vercel.app/"
-            >Backend GitHub Repository</a
-          >
-        </p>
-        <details>
-          <summary>Turning text files into paragraphs</summary>
-          <p>
-            This is the content inside the collapsible section. You can add any
-            type of content here, such as text, images, or even forms.
-          </p>
-        </details>
-        <details>
-          <summary>Translating text</summary>
-          <p>
-            This is the content inside the collapsible section. You can add any
-            type of content here, such as text, images, or even forms.
-          </p>
-        </details>
-        <details>
-          <summary>Utilizing OpenAI's chatGPT to simplify text</summary>
-          <p>
-            This is the content inside the collapsible section. You can add any
-            type of content here, such as text, images, or even forms.
-          </p>
-        </details>
-      </div>
+            </div> -->
+            </details>
+          </div>
+          <div class="project-container">
+            <h3>Flask Backend</h3>
+            <p>
+              <a href="https://language-learning-frontend-puce.vercel.app/"
+                >Backend GitHub Repository</a
+              >
+            </p>
+            <details>
+              <summary>Turning text files into paragraphs</summary>
+              <p>
+                I developed a system to efficiently process text files and
+                convert their raw content into structured paragraphs. The
+                process involves reading large text files 50 lines at a time
+                based on a given page number, and organizing it into a list of
+                paragraphs where each paragraph is a list of words for easier
+                display. To achieve this, I utilized string manipulation
+                techniques, such as splitting the text by newline characters. By
+                breaking down text into paragraphs, I was able to enhance the
+                user experience, allowing them to better understand context such
+                as who is speaking in a book.
+              </p>
+            </details>
+            <details>
+              <summary>Translating text</summary>
+              <p>
+                Using the Google Translate API, I created a seamless integration
+                that automatically translates text from its original language to
+                the selected target language. This functionality is used both in
+                translating whole pages and individual words.
+              </p>
+            </details>
+            <details>
+              <summary>Utilizing OpenAI's chatGPT to simplify text</summary>
+              <p>
+                By leveraging the OpenAI's chatGPT, I built a seamless system
+                that automatically simplifies text to allow users at different
+                levels of language learning to interact with the material. This
+                feature is especially beneficial in educational contexts,
+                helping users expand their vocabulary and read books in a
+                variety of languages.
+              </p>
+            </details>
+          </div>
+        </div>
       </section>
 
       <section id="contact" class="section-container">
