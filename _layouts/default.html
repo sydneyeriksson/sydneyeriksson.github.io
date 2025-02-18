@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #262626;
-      margin: 0;
-      padding: 0;
-      color: #F4F4F4;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    /* Content area styles */
-    .content {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- Main content of the page -->
-  <main>
-    <img src="../docs/assets/website_front_page_color.png" alt="Website Front Page" width="100%">
-    
-    {{ content }} <!-- This will display the content from the page that uses this layout -->
-  </main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>This is the about section content.</p>
-  </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main content of the page -->
+    <content>
+      <div class="front-page-container">
+        <img
+          src="../docs/assets/website_front_page_color.png"
+          alt="Website Front Page"
+          width="100%"
+        />
+        <nav class="navigation-container">
+          <div class="navigation-button">
+            <a href="#about" class="navigation">About Me</a>
+          </div>
+          <div class="navigation-button">
+            <a href="#projects" class="navigation">Projects</a>
+          </div>
+          <div class="navigation-button">
+            <a href="#contact" class="navigation">Contact</a>
+          </div>
+        </nav>
+        <!-- <div class="section-container-topper"></div> -->
+      </div>
+      <section id="about" class="section-container">
+        <img
+          src="../docs/assets/profile_pic.png"
+          alt="profile_pic"
+          class="profile-pic"
+        />
+        <h1>About me</h1>
+        <p>
+          Hi, I'm Sydney Eriksson, a software developer passionate about web
+          development. I'm currently studying mathematics and computer science
+          at Hamilton College and will graduate in May 2025.
+        </p>
+        <p>
+          <a
+            href="../docs/assets/Sydney Eriksson_Resume.pdf"
+            download="Sydney_Eriksson_Resume.pdf"
+          >
+            Download My Resume
+          </a>
+        </p>
+        <h3>Why you should hire a farmer</h3>
+        <p>
+          Debugging code is a lot like debugging plants - specifically, removing
+          hornworms from tomato plants. First you have to test the code. This is
+          like walking into a field of tomatoes, hoping that there is no damage,
+          but knowing that Murphy's law exists. Then you have to find and
+          correct the error: carefully check every leaf and line of code until
+          you catch the suspect red-handed. In both fields, you never know if
+          you have caught the last bug. I have developed an extremely detail
+          oriented mindset because bugs tend to multiply, and I do not like
+          creating larger problems for myself. Beyond searching for bugs, I am
+          used to working long hours in physically and mentally uncomfortable
+          conditions. Farming means being outside in all types of weather and
+          solving an endless array of problems. While I anticipate your office
+          will be air conditioned, being able to maintain focus and a good
+          attitude when facing challenging and inconvenient situations is a
+          critical skill to form desirable solutions. I am determined, scrappy,
+          have a solid foundation in software development, and am excited to
+          jump into your role.
+        </p>
+      </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>This is the projects section content.</p>
-  </section>
+      <section id="projects" class="section-container">
+        <h1>Projects</h1>
+        <h3>
+          <a href="https://language-learning-frontend-puce.vercel.app/"
+            >Click here to see the Language Learning Web App</a
+          >
+        </h3>
+      </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>This is the contact section content.</p>
-  </section>
-</body>
+      <section id="contact" class="section-container">
+        <h1>Contact</h1>
+        <h3>
+          Email:
+          <a href="mailto:sydney.eriksson@gmail.com"
+            >sydney.eriksson@gmail.com</a
+          >
+        </h3>
+        <h3>
+          LinkedIn:
+          <a
+            href="https://linkedin.com/in/sydney-eriksson-ab3b48274"
+            target="_blank"
+            >sydney-eriksson</a
+          >
+        </h3>
+        <h3>
+          GitHub:
+          <a href="https://github.com/sydneyeriksson" target="_blank"
+            >sydneyeriksson</a
+          >
+        </h3>
+        <h3>Location: Madison, WI</h3>
+      </section>
+    </content>
+  </body>
 </html>
