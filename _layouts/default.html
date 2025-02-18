@@ -113,6 +113,67 @@
       details {
         margin: 7px;
       }
+      @media (max-width: 768px) {
+        .navigation-container {
+          position: absolute;
+          top: 35%;
+          right: 10%;
+          display: flex;
+          flex-direction: column;
+        }
+        .navigation-button {
+          display: inline-block; /* or inline */
+          padding: 3px 5px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin: 2px;
+          border-radius: 10px;
+          background-color: rgb(202, 224, 232);
+          font-size: x-small;
+          color: black;
+        }
+        .text-and-image {
+          display: block; /* Stack items vertically */
+          justify-content: space-between;
+        }
+        .project-container {
+          padding: 10px;
+        }
+        .text-container {
+          width: 100%;
+        }
+        .word_translate_img {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          gap: 20px;
+        }
+        .custom_text_img {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          gap: 20px;
+        }
+        .intro-container {
+          width: 100%;
+        }
+        .section-container {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          background-color: rgb(202, 224, 232);
+          color: rgb(36, 36, 36);
+          margin: 20px;
+          border-radius: 40px;
+          align-items: left;
+          justify-content: center;
+          padding: 15px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -201,11 +262,12 @@
                 flashcard deck for better learning.
               </p>
             </div>
-            <img
-              src="../docs/assets/language_app_overview.png"
-              alt="language_app_overview"
-              width="45%"
-            />
+            <div class="custom_text_img">
+              <img
+                src="../docs/assets/language_app_overview.png"
+                alt="language_app_overview"
+              />
+            </div>
           </div>
           <div class="project-container">
             <h3>React Frontend</h3>
