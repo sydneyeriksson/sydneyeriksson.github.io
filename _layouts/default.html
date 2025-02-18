@@ -31,7 +31,6 @@
         z-index: 0;
       }
       .front-page-container {
-        position: relative;
         margin-bottom: 100px;
       }
       .navigation-container {
@@ -120,6 +119,18 @@
         .front-page-container {
           position: relative;
           margin-bottom: 0px;
+          overflow: hidden;
+          justify-content: center;
+          width: 100%;
+        }
+        .front-image-container {
+          top: 50%; /* Position it vertically at 50% */
+          left: 50%; /* Position it horizontally at 50% */
+          transform: translate(
+            -50%
+          ); /* Offset it by 50% of its own width/height */
+          position: relative;
+          width: 120%;
         }
         .navigation-container {
           position: relative;
@@ -194,11 +205,13 @@
     <!-- Main content of the page -->
     <content>
       <div class="front-page-container">
-        <img
-          src="../docs/assets/website_front_page_color.png"
-          alt="Website Front Page"
-          width="100%"
-        />
+        <div class="front-image-container">
+          <img
+            src="../docs/assets/website_front_page_color.png"
+            alt="Website Front Page"
+            width="100%"
+          />
+        </div>
         <nav class="navigation-container">
           <div class="navigation-button">
             <a href="#about" class="navigation">About Me</a>
