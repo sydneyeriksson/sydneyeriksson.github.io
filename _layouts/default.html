@@ -111,6 +111,9 @@
       details {
         margin: 7px;
       }
+      summary:hover {
+        color: blue;
+      }
       @media (max-width: 768px) {
         .profile-pic {
           width: 25%;
@@ -246,30 +249,32 @@
             Download My Resume
           </a>
         </p>
-        <h3>Why you should hire a farmer</h3>
-        <p>
-          Debugging code is a lot like debugging plants - specifically, removing
-          hornworms from tomato plants. First you have to test the code. This is
-          like walking into a field of tomatoes, hoping that there is no damage,
-          but knowing that Murphy's law exists. Then you have to find and
-          correct the error: carefully check every leaf and line of code until
-          you catch the suspect red-handed. In both fields, you never know if
-          you have caught the last bug. I have developed an extremely detail
-          oriented mindset because bugs tend to multiply, and I do not like
-          creating larger problems for myself. Beyond searching for bugs, I am
-          used to working long hours in physically and mentally uncomfortable
-          conditions. Farming means being outside in all types of weather and
-          solving an endless array of problems. While I anticipate your office
-          will be air conditioned, being able to maintain focus and a good
-          attitude when facing challenging and inconvenient situations is a
-          critical skill to form desirable solutions. I am determined, scrappy,
-          have a solid foundation in software development, and am excited to
-          jump into your role.
-        </p>
+        <div class="project-container">
+          <h3>Why you should hire a farmer</h3>
+          <p>Debugging code is a lot like debugging plants:</p>
+          <li>
+            Test the code: Walk into a field or file, hope that there is no
+            damage, but know that Murphy's law exists.
+          </li>
+          <li>
+            Find and correct the error: Carefully check every leaf and line of
+            code until you catch the suspect red-handed.
+          </li>
+          <p>
+            Farming has led me to develop an extremely detail oriented mindset.
+            Furthermore, I am confident being outside in all types of weather
+            and solving an endless array of problems. While I anticipate your
+            office will be air conditioned, being able to maintain focus and a
+            good attitude when facing challenging and inconvenient situations is
+            a critical skill to form desirable solutions. I am determined,
+            scrappy, have a solid foundation in software development, and am
+            excited to jump into your role.
+          </p>
+        </div>
       </section>
 
       <section id="projects" class="section-container">
-        <h1>Projects</h1>
+        <h1>Projects - Click on arrows for more info</h1>
         <div class="project-container">
           <div class="text-and-image">
             <div class="intro-container">
@@ -522,31 +527,15 @@
                     page numbers directly.
                   </p>
                   <p>
-                    To provide a more interactive and immersive experience, I
-                    designed a "page turn" image that mimics the action of
-                    turning a page in a real book. This image appears when the
-                    user hovers over it. When the user clicks on the image in
-                    the bottom left corner, the page number decrements by one.
-                    Similarly, clicking on the image in the bottom right corner
-                    increments the page number by one.
-                  </p>
-                  <p>
-                    I also added a small blank footer at the bottom of the page.
-                    This ensures that the "page turn" image doesn’t interfere
-                    with users trying to click on words, maintaining a smooth
-                    and user-friendly interaction.
+                    I also added a small footer at the bottom of the page that
+                    includes arrows. When clicked, these arrows allow users to
+                    increment or decrement the page number, enabling smooth
+                    navigation through pages.
                   </p>
                 </div>
                 <div class="word_translate_img">
                   <img src="../docs/assets/go_to_page.png" alt="go_to_page" />
-                  <img
-                    src="../docs/assets/page_not_turning.png"
-                    alt="page_not_turning"
-                  />
-                  <img
-                    src="../docs/assets/page_turning.png"
-                    alt="page_turning"
-                  />
+                  <img src="../docs/assets/page_turn.png" alt="page_turn" />
                 </div>
               </div>
               <!-- <div class="text-and-image">
