@@ -31,6 +31,15 @@ canvas { padding:1px; border:1px solid #888; margin:2px; }
   background:#eee; height:50px;
   cursor:pointer; width:8px; margin:1px;
   border:1px solid #888; }
+.text-block {
+  max-width: 300px;
+  font-family: sans-serif;
+}
+.wrapper {
+  display: flex;
+  gap: 20px; /* Space between game and text */
+  align-items: flex-start; /* Align top edges */
+}
 #STATUS { font-size:10px; font-family:sans-serif;}
 #DEBUGGER { height:0px; overflow:hidden; padding:1px;}
 a, label { cursor:pointer; color:#88C; text-decoration:none;}
