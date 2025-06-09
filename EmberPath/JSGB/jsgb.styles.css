@@ -42,8 +42,11 @@ canvas { padding:1px; border:1px solid #888; margin:2px; }
 }
 .wrapper {
   display: flex;
-  gap: 20px; /* Space between game and text */
-  align-items: flex-start; /* Align top edges */
+  flex-wrap: wrap; /* allows it to stack on small screens */
+  gap: 24px;
+  align-items: flex-start;
+  font-family: sans-serif;
+  margin: 20px;
 }
 #STATUS { font-size:10px; font-family:sans-serif;}
 #DEBUGGER { height:0px; overflow:hidden; padding:1px;}
